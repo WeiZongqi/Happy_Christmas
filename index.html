@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>Laurel Merry Christmas - 2014 by Ian</title>
+	<!-- for dev -->
+	<!-- <link rel="stylesheet" href="src/css/christmas.css">
+	<link rel="stylesheet" href="src/css/animate.css"> -->
+
+	<!-- for pro -->
+	<link rel="stylesheet" href="src/css/base.css">
+	<link rel="stylesheet" href="src/css/animate.min.css">
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script src="src/js/parameter.js"></script>
+	<link rel="stylesheet" href="dist/css/app.css">
+	<style type="text/css">
+		#text{
+			color: black;
+			text-align: left; /*让div内部文字居中*/
+			background-color: white;
+			border-radius: 20px;
+			width: 300px;
+			height: 160px;
+			padding: 30px;
+			font-size: 18px;
+			font-family: "Arial","Microsoft YaHei", "黑体","宋体",sans-serif;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity:0.0;
+		}
+	</style>
+</head>
+<body>
+	<section class="loading-mask">
+		<section class="loading">
+			<div class="progress">
+				<div class="progres-bar"><i class="icon-car"></i></div>
+			</div>
+			<p class="loading-text">努力加载中...</p>
+		</section>
+		<!-- end loading -->
+		<a href="javascript:;" class="playBgMusic animate-notifylight" id="j-playBgMusic">进入</a>
+	</section>
+
+	<section class="page out">
+		<section class="content">
+			<!-- animate class bigSnow-smallPos -->
+			<section class="bigSnow-panel j-bigSnow animate-bigSnowRotate transition">
+				<i class="img-bigSnow snow1 animate-bigSnow1Change transition"></i>
+				<i class="img-bigSnow snow2 animate-bigSnow2Change transition"></i>
+				<i class="img-bigSnow snow3 animate-bigSnow3Change transition"></i>
+			</section>
+			<!-- end bigSnow-panel -->
+
+			<div class="banner-panel j-banner opacity0 animated">
+				<!-- animate class show -->
+				<span class="textMask mask1 j-textmask1"><i class="transition"></i></span>
+				<span class="textMask mask2 j-textmask2"><i class="transition"></i></span>
+				<span class="textMask mask3 j-textmask3"><i class="transition"></i></span>
+				<i class="img-glove animate-gloveSwing"></i>
+			</div>
+
+			<div id='text'></div>
+
+
+			<i class="img-tree left opacity0 transition tn j-tree-left"></i>
+			<i class="img-tree right opacity0 transition tn j-tree-right"></i>
+			<!-- end trees -->
+
+			<section class="bag-panel opacity0 animated j-bag">
+				<i class="img-gift gift1 j-gift1 opacity0 animated"></i>
+				<i class="img-gift gift2 j-gift2 opacity0 animated"></i>
+				<i class="img-gift gift3 j-gift3 opacity0 animated"></i>
+			</section>
+			<!-- end bag-panel -->
+
+			<i class="img-stars opacity0 animated j-stars"></i>
+			<i class="content-bg opacity0 animated j-bottomBg"></i>
+		</section>
+		<!-- end content -->
+	</section>
+
+	<audio id="bgmusci" preload="load" loop="loop"><source src="main.mp3" type="audio/mpeg" /></audio>
+
+	<!-- for dev -->
+	<!--<script src="src/js/zepto-min.js"></script>
+	<script src="src/js/snowstorm.js"></script>
+	<script src="src/js/christmas.js"></script>-->
+	
+	<!-- for pro -->
+	<script src="dist/js/app.js"></script>
+	<script type="text/javascript">
+		
+		
+		$(function remind() {
+			setTimeout(function() { rr(); }, 10000);
+			function rr(){
+
+				var textt = document.getElementById('text');
+				textt.style.opacity = 0.5;
+
+				var word1 = text({
+				str: " 寒冷的冬天···································有一个浪漫的节日是圣诞·················浪漫的圣诞里有一个祝福在传遍········传遍的信息里满满的是平安··············平安的传递里是你的健康我的祝愿·····    Miss ·Jiang~ 祝你圣诞快乐!", //所需显示的一段字符文字
+				effect: "random", //显示效果具体可以到页面中看 normal right left down up random rightBig leftBig downBig upBig
+				speed : 100, //显示速度  慢400 正常200 快60 极快15  数字可以自定义
+				conBox: "#text",
+			});
+			}
+			
+		});
+	</script>
+	<script>
+	ISPRO=true;
+	</script>
+</body>
+</html>
